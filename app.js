@@ -25,10 +25,14 @@ const randomMessage = () => {
     newMessage.push(`Watch this movie: ${cinemaNight.randomMovie()}`);
     newMessage.push(`Eat this snack: ${cinemaNight.randomSnack()}`);
     newMessage.push(`Drink this soda: ${cinemaNight.randomSoda()}`);
-    newMessage.forEach(str => {
-        console.log(str);
-    });
+    return newMessage;
+}
+
+//Format the message
+const formatMessage = () => {
+    const formatted = randomMessage().join('\n');
+    console.log(formatted);
 }
 
 //Function call
-randomMessage();
+formatMessage();
